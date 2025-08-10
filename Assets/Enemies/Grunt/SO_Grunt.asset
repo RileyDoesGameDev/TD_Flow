@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6730700ce45f74d9f73f65215ffd37, type: 3}
+  m_Name: SO_Grunt
+  m_EditorClassIdentifier: 
+  Speed: 5
+  MaxHP: 8.74
+  Damage: 1.67
+  prefab: {fileID: 1984355171718672650, guid: 3636b06573d7de2409f508b618a9d4cc, type: 3}
