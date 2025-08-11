@@ -38,10 +38,7 @@ public class Annoyance : SplineMover
     }
     private void OnDestroy()
     {
-        if (this.hitThePentagon)
-        {
-            //do damage to the player
-        }
+      
         
     }
 }
