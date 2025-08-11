@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5900928058577073490}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,6 +104,7 @@ MonoBehaviour:
   hasPin: 0
   pinColor: {r: 0, g: 0, b: 0, a: 0}
   pinPrefab: {fileID: 0}
+  fillPrefab: {fileID: 0}
 --- !u!61 &5900928058577073490
 BoxCollider2D:
   m_ObjectHideFlags: 0

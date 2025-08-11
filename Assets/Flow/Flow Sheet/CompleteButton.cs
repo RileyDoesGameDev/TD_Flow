@@ -2,10 +2,16 @@ using UnityEngine;
 
 public class CompleteButton : MonoBehaviour
 {
-    SO_ChartData ChartData;
+    public SO_ChartData ChartData;
+    public FlowGrid flowGrid;
+
+
     
     void Start()
     {
+       
+
+      
         
     }
 
@@ -13,5 +19,26 @@ public class CompleteButton : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnMouseEnter()
+    {
+
+       
+       
+  
+        
+    }
+
+    void OnMouseDown()
+    {
+        if (flowGrid.CheckGridValid(flowGrid.ReadFlowChart(), ChartData.Set1_5x5_Solution))
+        {
+            Destroy(transform.parent.gameObject);
+        }
+        else
+        {
+            flowGrid.ResetGrid();
+        }
     }
 }

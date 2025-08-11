@@ -11,14 +11,17 @@ public class Tile : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer pinRenderer;
     private SpriteRenderer filledRenderer;
-    private GameObject spawnedFill;
+    public GameObject spawnedFill;
+    public GameObject spawnedPin;
+    public string tileColor;
+   
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (hasPin)
         {
-            var spawnedPin = Instantiate(pinPrefab, transform);
+            spawnedPin = Instantiate(pinPrefab, transform);
             spawnedPin.transform.position = transform.position;
             pinRenderer = spawnedPin.GetComponent<SpriteRenderer>();
             pinRenderer.color = pinColor;
@@ -29,7 +32,7 @@ public class Tile : MonoBehaviour
             spawnedFill = Instantiate(fillPrefab, transform);
             filledRenderer = spawnedFill.GetComponent<SpriteRenderer>();
             //spawnedFill.transform.position = transform.position;
-            spawnedFill.transform.position = new Vector3(transform.position.x, transform.position.y, -1);
+            spawnedFill.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + -0.1f);
             spawnedFill.SetActive(false);
         }
         
@@ -37,12 +40,13 @@ public class Tile : MonoBehaviour
     }
 
 
-    public void DrawFill(Color Color)
+    public void DrawFill(Color Color, string tileColor)
     {
         if (spawnedFill != null)
         {
             filledRenderer.color = Color;
             spawnedFill.SetActive(true);
+            this.tileColor = tileColor;
         }
     }
     

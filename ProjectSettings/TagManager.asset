@@ -9,6 +9,7 @@ TagManager:
   - blue
   - yellow
   - orange
+  - tile
   layers:
   - Default
   - TransparentFX
