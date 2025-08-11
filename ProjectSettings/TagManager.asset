@@ -10,6 +10,8 @@ TagManager:
   - yellow
   - orange
   - tile
+  - Tower
+  - Enemy
   layers:
   - Default
   - TransparentFX
