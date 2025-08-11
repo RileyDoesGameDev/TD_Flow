@@ -1229,6 +1229,7 @@ MonoBehaviour:
   - SettingsScene
   - ResultsScene
   - TitleScene
+  pauseCanvas: {fileID: 0}
 --- !u!4 &1481786745
 Transform:
   m_ObjectHideFlags: 0
