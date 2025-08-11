@@ -32,7 +32,7 @@ public class CompleteButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (flowGrid.CheckGridValid(flowGrid.ReadFlowChart(), ChartData.Set1_5x5_Solution))
+        if (flowGrid.CheckGridValid(flowGrid.ReadFlowChart(), flowGrid.FlowSolution))
         {
             Destroy(transform.parent.gameObject);
         }

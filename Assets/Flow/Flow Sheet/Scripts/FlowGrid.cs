@@ -7,11 +7,11 @@ using UnityEngine.Rendering.Universal;
 public class FlowGrid : MonoBehaviour
 {
     public Camera mainCamera;
-    private Tile startTile;
+ 
     private Color activeColor;
     private string activeTileColor;
 
-
+    
     [SerializeField] private int CellCount;
 
     [SerializeField] private Tile tile;
@@ -23,17 +23,57 @@ public class FlowGrid : MonoBehaviour
     [SerializeField] private GameObject fill;
     private bool ValidTile = false;
     public SO_ChartData ChartData;
+    ChartDataStorage ChartDataStorage;
+    
+    public int[,] FlowChart;
+    public int[,] FlowSolution;
+
+    private Dictionary<int, int[,]> ChartDataList;
+    private Dictionary<int, int[,]> ChartDataSolutionList;
+    //SO_ChartData ChartData;
 
 
+    public void SetData()
+    {
+        ChartDataList = new Dictionary<int, int[,]>();
+        ChartDataSolutionList = new Dictionary<int, int[,]>();
+
+        ChartDataList.Add(1, ChartData.Set1_5x5);
+        ChartDataList.Add(2, ChartData.Set2_5x5);
+        ChartDataList.Add(3, ChartData.Set3_5x5);
+        ChartDataList.Add(4, ChartData.Set4_5x5);
+        ChartDataList.Add(5, ChartData.Set5_5x5);
+        ChartDataList.Add(6, ChartData.Set6_5x5);
+
+        ChartDataSolutionList.Add(1, ChartData.Set1_5x5_Solution);
+        ChartDataSolutionList.Add(2, ChartData.Set2_5x5_Solution);
+        ChartDataSolutionList.Add(3, ChartData.Set3_5x5_Solution);
+        ChartDataSolutionList.Add(4, ChartData.Set4_5x5_Solution);
+        ChartDataSolutionList.Add(5, ChartData.Set5_5x5_Solution);
+        ChartDataSolutionList.Add(6, ChartData.Set6_5x5_Solution);
+
+    }
     private void Awake()
     {
+        SetData();
 
-        GenerateGrid();
-        GeneratePins();
+
     }
     private void Start()
     {
+        FlowChart = new int[CellCount, CellCount];
+        FlowSolution = new int[CellCount, CellCount];
+
+        int randomNum = Random.Range(1, ChartDataList.Count);
+
+        FlowChart = ChartDataList[randomNum];
         
+        FlowSolution = ChartDataSolutionList[randomNum];
+        
+     
+       
+        GenerateGrid();
+        GeneratePins();
     }
 
     private void Update()
@@ -45,7 +85,7 @@ public class FlowGrid : MonoBehaviour
             if (tile != null && tile.hasPin)
             {
                 ValidTile = true;
-                startTile = tile;
+                
                 activeColor = tile.pinColor;
                 activeTileColor = tile.tileColor;
             }
@@ -131,7 +171,7 @@ public class FlowGrid : MonoBehaviour
 
         float offset = (CellCount- 0.5f);
         tiles = new Dictionary<Vector2, Tile>();
-       // tiles = new Tile[CellCount, CellCount];
+       
         for (int i = 0; i < CellCount; i++)
         {
             for(int j = 0; j < CellCount; j++)
@@ -179,7 +219,7 @@ public class FlowGrid : MonoBehaviour
                 GetTileAtPosition(new Vector2(i,j)).pinPrefab = Pin;
                 GetTileAtPosition(new Vector2(i,j)).fillPrefab = fill;
                 
-                switch (ChartData.Set1_5x5[i, j])
+                switch (FlowChart[i, j])
                 {
                     case 0:
                         
