@@ -4,6 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - green
+  - red
+  - blue
+  - yellow
+  - orange
+  - tile
   - Tower
   - Enemy
   layers:
