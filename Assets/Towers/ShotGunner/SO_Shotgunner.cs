@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SO_Accelerator", menuName = "Scriptable Objects/SO_Accelerator")]
-public class SO_Accelerator : ScriptableObject
+[CreateAssetMenu(fileName = "SO_Shotgunner", menuName = "Scriptable Objects/SO_Shotgunner")]
+public class SO_Shotgunner : ScriptableObject
 {
     public string description;
     public int cost;

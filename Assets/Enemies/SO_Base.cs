@@ -3,8 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SO_Base", menuName = "Scriptable Objects/SO_Base")]
 public abstract class SO_Base : ScriptableObject
 {
-    public float Speed;
-    public float MaxHP;
-    public float Damage;
+    public int Speed;
+    public int MaxHP;
+    public int Damage;
     //public GameObject prefab;
 }

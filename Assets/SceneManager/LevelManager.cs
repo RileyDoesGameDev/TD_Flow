@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public static bool isGamePaused = false;
 
     [SerializeField] GameObject pauseCanvas;
+    [SerializeField] GameObject gameUI;
 
     public void OnStartLoad()
     {
@@ -55,6 +56,7 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 0.0f;
         
         pauseCanvas.SetActive(true);
+        gameUI.SetActive(false);
 
         UnityEngine.Cursor.lockState = CursorLockMode.None;
     }
@@ -66,6 +68,7 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 1.0f;
 
         pauseCanvas.SetActive(false);
+        gameUI.SetActive(true);
 
         UnityEngine.Cursor.lockState = CursorLockMode.Confined;
     }
