@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57c60cb8404620b4b9af923006738ddb, type: 3}
-  m_Name: SO_Accelerator
+  m_Script: {fileID: 11500000, guid: 59866be0579eee64c876b9668cbbe75c, type: 3}
+  m_Name: SO_Igniter
   m_EditorClassIdentifier: 
-  description: Late game boss shredder
-  cost: 3250
+  description: Early game single-target damage
+  cost: 400
   range: 5
-  damage: 15
-  fireRate: 0.5
-  health: 10
+  damage: 2
+  fireRate: 1
+  health: 15

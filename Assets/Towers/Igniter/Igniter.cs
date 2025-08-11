@@ -1,11 +1,10 @@
-using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Accelerator : BaseTower
+public class Igniter : BaseTower
 {
-    public SO_Accelerator Data;
+    public SO_Igniter Data;
     CircleCollider2D CircleCollider2D;
     private List<GameObject> enemyCollection;
     private bool enemyInRange;
@@ -22,7 +21,7 @@ public class Accelerator : BaseTower
     void Start()
     {
         enemyCollection = new List<GameObject>();
-       CircleCollider2D = GetComponent<CircleCollider2D>();
+        CircleCollider2D = GetComponent<CircleCollider2D>();
         CircleCollider2D.radius = Data.range;
 
 
@@ -38,8 +37,8 @@ public class Accelerator : BaseTower
         {
             Fire();
         }
-       
-      
+
+
         Debug.Log(enemyCollection.Count);
     }
 
@@ -66,11 +65,4 @@ public class Accelerator : BaseTower
             enemyCollection.Remove(collision.gameObject);
         }
     }
-
-
-
-
-
-
-
 }

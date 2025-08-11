@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Accelerator : BaseTower
+public class Anchor : BaseTower
 {
-    public SO_Accelerator Data;
+    public SO_Anchor Data;
     CircleCollider2D CircleCollider2D;
     private List<GameObject> enemyCollection;
     private bool enemyInRange;
     private void Awake()
     {
-        health = Data.health;
         damage = Data.damage;
         description = Data.description;
         cost = Data.cost;
         range = Data.range;
         fireRate = Data.fireRate;
+        health = Data.health;
     }
 
     void Start()
     {
         enemyCollection = new List<GameObject>();
-       CircleCollider2D = GetComponent<CircleCollider2D>();
+        CircleCollider2D = GetComponent<CircleCollider2D>();
         CircleCollider2D.radius = Data.range;
 
 
@@ -38,8 +38,8 @@ public class Accelerator : BaseTower
         {
             Fire();
         }
-       
-      
+
+
         Debug.Log(enemyCollection.Count);
     }
 

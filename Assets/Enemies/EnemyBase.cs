@@ -7,9 +7,9 @@ public abstract class EnemyBase : MonoBehaviour
 {
     //base enemy class, all enemies will have a velocity hp, speed and max hp.
     protected Vector3 Velocity;
-    protected float HP;
-    protected float Speed;
-    protected float MaxHP;
+    public int HP;
+    public int Speed;
+    public int MaxHP;
     protected float Damage;
     protected Animator animator;
     //protected GameObject prefab;

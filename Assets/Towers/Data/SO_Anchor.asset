@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57c60cb8404620b4b9af923006738ddb, type: 3}
-  m_Name: SO_Accelerator
+  m_Script: {fileID: 11500000, guid: 4c70d6b1be4f68543b27a47f28469b50, type: 3}
+  m_Name: SO_Anchor
   m_EditorClassIdentifier: 
-  description: Late game boss shredder
-  cost: 3250
+  description: Mid game crowd control that slows enemies in its radius
+  cost: 650
   range: 5
-  damage: 15
-  fireRate: 0.5
-  health: 10
+  damage: 5
+  fireRate: 4
+  health: 20

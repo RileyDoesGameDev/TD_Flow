@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SO_Accelerator", menuName = "Scriptable Objects/SO_Accelerator")]
-public class SO_Accelerator : ScriptableObject
+[CreateAssetMenu(fileName = "SO_Igniter", menuName = "Scriptable Objects/SO_Igniter")]
+public class SO_Igniter : ScriptableObject
 {
     public string description;
     public int cost;

@@ -2,15 +2,13 @@ using UnityEngine;
 
 public abstract class BaseTower : MonoBehaviour
 {
-    protected string discription;
+    protected string description;
     protected int cost;
     protected float range;
-    protected float damage;
-    protected int fireRate;
+    protected int damage;
+    protected float fireRate;
+    protected int health;
     
     protected abstract void Fire();
-
-
-
 
 }
