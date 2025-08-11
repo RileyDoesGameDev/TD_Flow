@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Splines;
 
 [CreateAssetMenu(fileName = "SO_Grunt", menuName = "Scriptable Objects/SO_Grunt")]
-public class SO_Grunt : SO_Base
+public class SO_Grunt : SO_EnemyBase
 {
     
 }
